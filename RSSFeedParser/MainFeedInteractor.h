@@ -1,10 +1,3 @@
-//
-//  MainFeedInteractor.h
-//  ObjCTest
-//
-//  Created by MIKHAIL RAKHMANOV on 28.04.16.
-//  Copyright © 2016 No Logo. All rights reserved.
-//
 
 #ifndef MainFeedInteractor_h
 #define MainFeedInteractor_h

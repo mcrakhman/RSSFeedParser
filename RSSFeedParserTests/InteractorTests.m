@@ -40,33 +40,41 @@
 	// given
 	
 	// when
+	
 	[self.interactor startSearchingForRSSFeeds];
 	
-	//then
+	// then
+	
 	OCMVerify([self.mockService findFeeds]);
 }
 
 - (void)testShowFeedPresenterFunctionExecution {
 	
 	// given
+	
 	FeedPlainObject* testFeed = [FeedPlainObject new];
 	
 	// when
+	
 	[self.interactor didDownloadFeed:testFeed];
 	
-	//then
+	// then
+	
 	OCMVerify([self.mockPresenter showFeed:testFeed]);
 }
 
 - (void)testErrorOccuredPresenterFunctionExecution {
 	
 	// given
+	
 	NSError* error = [NSError new];
 	
 	// when
+	
 	[self.interactor errorDidOccur:error];
 	
-	//then
+	// then
+	
 	OCMVerify([self.mockPresenter showError:error]);
 }
 
