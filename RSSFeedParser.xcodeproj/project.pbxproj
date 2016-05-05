@@ -35,6 +35,8 @@
 		96E218811CDB5B0C00ADCF21 /* FeedCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218801CDB5B0C00ADCF21 /* FeedCellModel.m */; };
 		96E218851CDB5BA000ADCF21 /* FeedConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218841CDB5BA000ADCF21 /* FeedConverter.m */; };
 		96E218891CDB5F6100ADCF21 /* FeedConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218881CDB5F6100ADCF21 /* FeedConverterTests.m */; };
+		96E2188E1CDB73B400ADCF21 /* FeedDataConverterStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2188D1CDB73B400ADCF21 /* FeedDataConverterStore.m */; };
+		96E218911CDB791500ADCF21 /* FeedDataConverterStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */; };
 		EAE8C057BDFF5992E0812838 /* Pods_RSSFeedParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +117,10 @@
 		96E218831CDB5B9700ADCF21 /* FeedConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedConverter.h; sourceTree = "<group>"; };
 		96E218841CDB5BA000ADCF21 /* FeedConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedConverter.m; sourceTree = "<group>"; };
 		96E218881CDB5F6100ADCF21 /* FeedConverterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedConverterTests.m; sourceTree = "<group>"; };
+		96E2188B1CDB73A600ADCF21 /* DataConverterStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataConverterStore.h; sourceTree = "<group>"; };
+		96E2188C1CDB73AE00ADCF21 /* FeedDataConverterStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedDataConverterStore.h; sourceTree = "<group>"; };
+		96E2188D1CDB73B400ADCF21 /* FeedDataConverterStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDataConverterStore.m; sourceTree = "<group>"; };
+		96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDataConverterStoreTests.m; sourceTree = "<group>"; };
 		9D14689CC9787E0BD2B00FD8 /* Pods-RSSFeedParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeedParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeedParser/Pods-RSSFeedParser.release.xcconfig"; sourceTree = "<group>"; };
 		DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSFeedParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -286,6 +292,7 @@
 		96E2182F1CDA6D7900ADCF21 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96E2188A1CDB738900ADCF21 /* FeedDataConverterStore */,
 				96E218821CDB5B8400ADCF21 /* FeedConverter */,
 				96E2187D1CDB5AE300ADCF21 /* FeedCellModel */,
 				96E218751CDB534E00ADCF21 /* ViewController */,
@@ -535,6 +542,7 @@
 		96E218861CDB5F3E00ADCF21 /* ViewTests */ = {
 			isa = PBXGroup;
 			children = (
+				96E2188F1CDB78F900ADCF21 /* FeedDataConverterStoreTests */,
 				96E218871CDB5F4A00ADCF21 /* FeedConverterTests */,
 			);
 			name = ViewTests;
@@ -546,6 +554,24 @@
 				96E218881CDB5F6100ADCF21 /* FeedConverterTests.m */,
 			);
 			name = FeedConverterTests;
+			sourceTree = "<group>";
+		};
+		96E2188A1CDB738900ADCF21 /* FeedDataConverterStore */ = {
+			isa = PBXGroup;
+			children = (
+				96E2188B1CDB73A600ADCF21 /* DataConverterStore.h */,
+				96E2188C1CDB73AE00ADCF21 /* FeedDataConverterStore.h */,
+				96E2188D1CDB73B400ADCF21 /* FeedDataConverterStore.m */,
+			);
+			name = FeedDataConverterStore;
+			sourceTree = "<group>";
+		};
+		96E2188F1CDB78F900ADCF21 /* FeedDataConverterStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */,
+			);
+			name = FeedDataConverterStoreTests;
 			sourceTree = "<group>";
 		};
 		F37650CC6D8BE5A042BCCF7C /* Frameworks */ = {
@@ -760,6 +786,7 @@
 				96E217F61CDA69FA00ADCF21 /* main.m in Sources */,
 				96E218541CDB3DC900ADCF21 /* OutRussianDateFormatter.m in Sources */,
 				96E218341CDA6F0000ADCF21 /* FeedPlainObject.m in Sources */,
+				96E2188E1CDB73B400ADCF21 /* FeedDataConverterStore.m in Sources */,
 				96E218421CDA7EBF00ADCF21 /* RSSFeedParserImplementation.m in Sources */,
 				96E218811CDB5B0C00ADCF21 /* FeedCellModel.m in Sources */,
 				96E218741CDB533600ADCF21 /* MainFeedPresenter.m in Sources */,
@@ -776,6 +803,7 @@
 				96E218701CDB4A5800ADCF21 /* InteractorTests.m in Sources */,
 				96E218651CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m in Sources */,
 				96E2185B1CDB3F5200ADCF21 /* RussianDateFormatterTest.m in Sources */,
+				96E218911CDB791500ADCF21 /* FeedDataConverterStoreTests.m in Sources */,
 				96E2187C1CDB552800ADCF21 /* MainFeedPresenterTests.m in Sources */,
 				96E2184C1CDB3B9E00ADCF21 /* ImageResizeTests.m in Sources */,
 				96E2180F1CDA69FA00ADCF21 /* RSSFeedParserTests.m in Sources */,
