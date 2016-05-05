@@ -22,6 +22,12 @@
 		96E218451CDA7F4600ADCF21 /* RSSFeedParserImplementationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218441CDA7F4600ADCF21 /* RSSFeedParserImplementationTests.m */; };
 		96E218491CDB372300ADCF21 /* ImageResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218481CDB372300ADCF21 /* ImageResize.m */; };
 		96E2184C1CDB3B9E00ADCF21 /* ImageResizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2184B1CDB3B9E00ADCF21 /* ImageResizeTests.m */; };
+		96E218501CDB3DA400ADCF21 /* InRSSDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2184F1CDB3DA400ADCF21 /* InRSSDateFormatter.m */; };
+		96E218541CDB3DC900ADCF21 /* OutRussianDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218531CDB3DC900ADCF21 /* OutRussianDateFormatter.m */; };
+		96E218591CDB3F4A00ADCF21 /* InRSSDateFormatterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218581CDB3F4A00ADCF21 /* InRSSDateFormatterTest.m */; };
+		96E2185B1CDB3F5200ADCF21 /* RussianDateFormatterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2185A1CDB3F5200ADCF21 /* RussianDateFormatterTest.m */; };
+		96E218601CDB436F00ADCF21 /* RSSFeedParserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2185F1CDB436F00ADCF21 /* RSSFeedParserService.m */; };
+		96E218651CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218641CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m */; };
 		EAE8C057BDFF5992E0812838 /* Pods_RSSFeedParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +79,19 @@
 		96E218471CDB371A00ADCF21 /* ImageResize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageResize.h; sourceTree = "<group>"; };
 		96E218481CDB372300ADCF21 /* ImageResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResize.m; sourceTree = "<group>"; };
 		96E2184B1CDB3B9E00ADCF21 /* ImageResizeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResizeTests.m; sourceTree = "<group>"; };
+		96E2184E1CDB3D9500ADCF21 /* InRSSDateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InRSSDateFormatter.h; sourceTree = "<group>"; };
+		96E2184F1CDB3DA400ADCF21 /* InRSSDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InRSSDateFormatter.m; sourceTree = "<group>"; };
+		96E218511CDB3DB100ADCF21 /* InDateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InDateFormatter.h; sourceTree = "<group>"; };
+		96E218521CDB3DC300ADCF21 /* OutRussianDateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutRussianDateFormatter.h; sourceTree = "<group>"; };
+		96E218531CDB3DC900ADCF21 /* OutRussianDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutRussianDateFormatter.m; sourceTree = "<group>"; };
+		96E218551CDB3DD100ADCF21 /* OutDateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutDateFormatter.h; sourceTree = "<group>"; };
+		96E218561CDB3DDE00ADCF21 /* DateFormatterConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateFormatterConstants.h; sourceTree = "<group>"; };
+		96E218581CDB3F4A00ADCF21 /* InRSSDateFormatterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InRSSDateFormatterTest.m; sourceTree = "<group>"; };
+		96E2185A1CDB3F5200ADCF21 /* RussianDateFormatterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RussianDateFormatterTest.m; sourceTree = "<group>"; };
+		96E2185E1CDB436700ADCF21 /* RSSFeedParserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSFeedParserService.h; sourceTree = "<group>"; };
+		96E2185F1CDB436F00ADCF21 /* RSSFeedParserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedParserService.m; sourceTree = "<group>"; };
+		96E218611CDB437500ADCF21 /* RSSFeedParserServiceOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSFeedParserServiceOutput.h; sourceTree = "<group>"; };
+		96E218641CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedParserServiceTests.m; sourceTree = "<group>"; };
 		9D14689CC9787E0BD2B00FD8 /* Pods-RSSFeedParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeedParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeedParser/Pods-RSSFeedParser.release.xcconfig"; sourceTree = "<group>"; };
 		DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSFeedParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,6 +167,7 @@
 		96E2180D1CDA69FA00ADCF21 /* RSSFeedParserTests */ = {
 			isa = PBXGroup;
 			children = (
+				96E218621CDB43AF00ADCF21 /* ServicesTests */,
 				96E2183A1CDA75D100ADCF21 /* ModelsTests */,
 				96E2180E1CDA69FA00ADCF21 /* RSSFeedParserTests.m */,
 				96E218101CDA69FA00ADCF21 /* Info.plist */,
@@ -167,8 +187,9 @@
 		96E218271CDA6A1000ADCF21 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				96E2182C1CDA6D5400ADCF21 /* UserStories */,
 				96E218291CDA6D2B00ADCF21 /* ApplicationLayer */,
+				96E2185C1CDB424E00ADCF21 /* Services */,
+				96E2182C1CDA6D5400ADCF21 /* UserStories */,
 				96E218281CDA6D2000ADCF21 /* Models */,
 			);
 			name = Classes;
@@ -177,6 +198,7 @@
 		96E218281CDA6D2000ADCF21 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				96E2184D1CDB3D6900ADCF21 /* DateFormatters */,
 				96E218461CDB370700ADCF21 /* ImageResize */,
 				96E2183E1CDA7E8F00ADCF21 /* RSSFeedParser */,
 				96E218351CDA6F8500ADCF21 /* DataDownloader */,
@@ -275,6 +297,7 @@
 		96E2183A1CDA75D100ADCF21 /* ModelsTests */ = {
 			isa = PBXGroup;
 			children = (
+				96E218571CDB3F2800ADCF21 /* DateFormatterTests */,
 				96E2184A1CDB3B8400ADCF21 /* ImageResizeTests */,
 				96E218431CDA7F2B00ADCF21 /* RSSFeedParserTests */,
 				96E2183B1CDA75E900ADCF21 /* DataDownloaderTests */,
@@ -323,6 +346,63 @@
 				96E2184B1CDB3B9E00ADCF21 /* ImageResizeTests.m */,
 			);
 			name = ImageResizeTests;
+			sourceTree = "<group>";
+		};
+		96E2184D1CDB3D6900ADCF21 /* DateFormatters */ = {
+			isa = PBXGroup;
+			children = (
+				96E218561CDB3DDE00ADCF21 /* DateFormatterConstants.h */,
+				96E218511CDB3DB100ADCF21 /* InDateFormatter.h */,
+				96E2184E1CDB3D9500ADCF21 /* InRSSDateFormatter.h */,
+				96E2184F1CDB3DA400ADCF21 /* InRSSDateFormatter.m */,
+				96E218551CDB3DD100ADCF21 /* OutDateFormatter.h */,
+				96E218521CDB3DC300ADCF21 /* OutRussianDateFormatter.h */,
+				96E218531CDB3DC900ADCF21 /* OutRussianDateFormatter.m */,
+			);
+			name = DateFormatters;
+			sourceTree = "<group>";
+		};
+		96E218571CDB3F2800ADCF21 /* DateFormatterTests */ = {
+			isa = PBXGroup;
+			children = (
+				96E2185A1CDB3F5200ADCF21 /* RussianDateFormatterTest.m */,
+				96E218581CDB3F4A00ADCF21 /* InRSSDateFormatterTest.m */,
+			);
+			name = DateFormatterTests;
+			sourceTree = "<group>";
+		};
+		96E2185C1CDB424E00ADCF21 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				96E2185D1CDB426E00ADCF21 /* RSSFeedParserService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		96E2185D1CDB426E00ADCF21 /* RSSFeedParserService */ = {
+			isa = PBXGroup;
+			children = (
+				96E218611CDB437500ADCF21 /* RSSFeedParserServiceOutput.h */,
+				96E2185E1CDB436700ADCF21 /* RSSFeedParserService.h */,
+				96E2185F1CDB436F00ADCF21 /* RSSFeedParserService.m */,
+			);
+			name = RSSFeedParserService;
+			sourceTree = "<group>";
+		};
+		96E218621CDB43AF00ADCF21 /* ServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				96E218631CDB43B800ADCF21 /* RSSFeedParserServiceTests */,
+			);
+			name = ServicesTests;
+			sourceTree = "<group>";
+		};
+		96E218631CDB43B800ADCF21 /* RSSFeedParserServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				96E218641CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m */,
+			);
+			name = RSSFeedParserServiceTests;
 			sourceTree = "<group>";
 		};
 		F37650CC6D8BE5A042BCCF7C /* Frameworks */ = {
@@ -526,11 +606,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E218501CDB3DA400ADCF21 /* InRSSDateFormatter.m in Sources */,
+				96E218601CDB436F00ADCF21 /* RSSFeedParserService.m in Sources */,
 				96E217FC1CDA69FA00ADCF21 /* ViewController.m in Sources */,
 				96E217F91CDA69FA00ADCF21 /* AppDelegate.m in Sources */,
 				96E218391CDA757E00ADCF21 /* DataDownloaderImplementation.m in Sources */,
 				96E218491CDB372300ADCF21 /* ImageResize.m in Sources */,
 				96E217F61CDA69FA00ADCF21 /* main.m in Sources */,
+				96E218541CDB3DC900ADCF21 /* OutRussianDateFormatter.m in Sources */,
 				96E218341CDA6F0000ADCF21 /* FeedPlainObject.m in Sources */,
 				96E218421CDA7EBF00ADCF21 /* RSSFeedParserImplementation.m in Sources */,
 			);
@@ -541,6 +624,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E2183D1CDA760B00ADCF21 /* DataDownloaderImplementationTest.m in Sources */,
+				96E218591CDB3F4A00ADCF21 /* InRSSDateFormatterTest.m in Sources */,
+				96E218651CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m in Sources */,
+				96E2185B1CDB3F5200ADCF21 /* RussianDateFormatterTest.m in Sources */,
 				96E2184C1CDB3B9E00ADCF21 /* ImageResizeTests.m in Sources */,
 				96E2180F1CDA69FA00ADCF21 /* RSSFeedParserTests.m in Sources */,
 				96E218451CDA7F4600ADCF21 /* RSSFeedParserImplementationTests.m in Sources */,
