@@ -38,7 +38,6 @@
 	[super tearDown];
 }
 
-
 - (void) testThatCellIsProperlyConfiguredWithCellModel {
 	
 	// given
@@ -69,6 +68,10 @@
 	
 	XCTAssert(cell.imageWidthConstraint.constant == self.cellConfiguration.imageSize.width);
 	XCTAssert(cell.imageHeightConstraint.constant == self.cellConfiguration.imageSize.height);
+}
+
+- (void) newTest {
+	XCTAssert(1 == 1);
 }
 
 @end

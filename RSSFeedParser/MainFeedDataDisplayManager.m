@@ -44,7 +44,7 @@ static NSInteger const kDefaultSelectedRowIndex = -1;
 	}
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	self.selectedRowIndex = self.selectedRowIndex != indexPath.row ? indexPath.row : kDefaultSelectedRowIndex;
 	[tableView reloadData];

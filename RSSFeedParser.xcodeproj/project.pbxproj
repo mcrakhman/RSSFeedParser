@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965BE36D1CDBBA100025DACB /* DataDisplayManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BE36C1CDBBA100025DACB /* DataDisplayManagerTests.m */; };
+		965BE36F1CDBCF050025DACB /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BE36E1CDBCF050025DACB /* ViewControllerTests.m */; };
 		96E217F61CDA69FA00ADCF21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E217F51CDA69FA00ADCF21 /* main.m */; };
 		96E217F91CDA69FA00ADCF21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E217F81CDA69FA00ADCF21 /* AppDelegate.m */; };
 		96E217FC1CDA69FA00ADCF21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E217FB1CDA69FA00ADCF21 /* ViewController.m */; };
@@ -39,7 +41,6 @@
 		96E218911CDB791500ADCF21 /* FeedDataConverterStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */; };
 		96E218961CDB8A1B00ADCF21 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218951CDB8A1B00ADCF21 /* FeedCell.m */; };
 		96E2189C1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2189B1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m */; };
-		96E2189F1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2189E1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m */; };
 		96E218A11CDB99ED00ADCF21 /* FeedCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218A01CDB99ED00ADCF21 /* FeedCellTests.m */; };
 		EAE8C057BDFF5992E0812838 /* Pods_RSSFeedParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		3422CA154FF09066377587E9 /* Pods-RSSFeedParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeedParser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeedParser/Pods-RSSFeedParser.debug.xcconfig"; sourceTree = "<group>"; };
+		965BE36C1CDBBA100025DACB /* DataDisplayManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataDisplayManagerTests.m; sourceTree = "<group>"; };
+		965BE36E1CDBCF050025DACB /* ViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTests.m; sourceTree = "<group>"; };
 		96E217F11CDA69FA00ADCF21 /* RSSFeedParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeedParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E217F51CDA69FA00ADCF21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96E217F71CDA69FA00ADCF21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,7 +134,6 @@
 		96E218991CDB8C4900ADCF21 /* DataDisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataDisplayManager.h; sourceTree = "<group>"; };
 		96E2189A1CDB8C5300ADCF21 /* MainFeedDataDisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFeedDataDisplayManager.h; sourceTree = "<group>"; };
 		96E2189B1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedDataDisplayManager.m; sourceTree = "<group>"; };
-		96E2189E1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedDataDisplayManagerTests.m; sourceTree = "<group>"; };
 		96E218A01CDB99ED00ADCF21 /* FeedCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCellTests.m; sourceTree = "<group>"; };
 		9D14689CC9787E0BD2B00FD8 /* Pods-RSSFeedParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeedParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeedParser/Pods-RSSFeedParser.release.xcconfig"; sourceTree = "<group>"; };
 		DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSFeedParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -557,8 +559,9 @@
 		96E218861CDB5F3E00ADCF21 /* ViewTests */ = {
 			isa = PBXGroup;
 			children = (
+				965BE36E1CDBCF050025DACB /* ViewControllerTests.m */,
+				965BE36C1CDBBA100025DACB /* DataDisplayManagerTests.m */,
 				96E218A01CDB99ED00ADCF21 /* FeedCellTests.m */,
-				96E2189E1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m */,
 				96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */,
 				96E218881CDB5F6100ADCF21 /* FeedConverterTests.m */,
 				96E2189D1CDB8F7700ADCF21 /* MainFeedDataDisplayManagerTests */,
@@ -605,8 +608,8 @@
 			isa = PBXGroup;
 			children = (
 				96E218991CDB8C4900ADCF21 /* DataDisplayManager.h */,
-				96E2189B1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m */,
 				96E2189A1CDB8C5300ADCF21 /* MainFeedDataDisplayManager.h */,
+				96E2189B1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m */,
 			);
 			name = DataDisplayManager;
 			sourceTree = "<group>";
@@ -845,7 +848,9 @@
 			files = (
 				96E2183D1CDA760B00ADCF21 /* DataDownloaderImplementationTest.m in Sources */,
 				96E218591CDB3F4A00ADCF21 /* InRSSDateFormatterTest.m in Sources */,
+				965BE36D1CDBBA100025DACB /* DataDisplayManagerTests.m in Sources */,
 				96E218891CDB5F6100ADCF21 /* FeedConverterTests.m in Sources */,
+				965BE36F1CDBCF050025DACB /* ViewControllerTests.m in Sources */,
 				96E218701CDB4A5800ADCF21 /* InteractorTests.m in Sources */,
 				96E218651CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m in Sources */,
 				96E2185B1CDB3F5200ADCF21 /* RussianDateFormatterTest.m in Sources */,
@@ -853,7 +858,6 @@
 				96E218911CDB791500ADCF21 /* FeedDataConverterStoreTests.m in Sources */,
 				96E2187C1CDB552800ADCF21 /* MainFeedPresenterTests.m in Sources */,
 				96E2184C1CDB3B9E00ADCF21 /* ImageResizeTests.m in Sources */,
-				96E2189F1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m in Sources */,
 				96E2180F1CDA69FA00ADCF21 /* RSSFeedParserTests.m in Sources */,
 				96E218451CDA7F4600ADCF21 /* RSSFeedParserImplementationTests.m in Sources */,
 			);

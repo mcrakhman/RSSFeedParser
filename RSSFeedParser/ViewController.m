@@ -16,8 +16,8 @@
 	
 	self.isErrorShowing = false;
 	
-	//[self configureTableView];
-	//[self.output getFeeds];
+	[self configureTableView];
+	[self.output getFeeds];
 }
 
 - (void)viewDidAppear: (BOOL) animated {

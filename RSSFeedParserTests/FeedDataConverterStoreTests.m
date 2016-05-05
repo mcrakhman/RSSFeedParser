@@ -79,4 +79,8 @@
 	}
 }
 
+- (void) newTest {
+	
+}
+
 @end
