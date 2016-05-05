@@ -1,15 +1,17 @@
-//
-//  ViewController.h
-//  RSSFeedParser
-//
-//  Created by MIKHAIL RAKHMANOV on 04.05.16.
-//  Copyright © 2016 No Logo. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
+#import "RSSFeedParser.h"
+#import "MainFeedPresenter.h"
+#import "FeedDataConverterStore.h"
+#import "DataDisplayManager.h"
+#import "MainFeedViewInput.h"
+#import "MainFeedViewOutput.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MainFeedViewInput>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong, readwrite) id <MainFeedViewOutput> output;
+@property (nonatomic, strong, readwrite) id <DataDisplayManager> manager;
 
 @end
 

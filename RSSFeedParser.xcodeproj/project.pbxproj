@@ -37,6 +37,10 @@
 		96E218891CDB5F6100ADCF21 /* FeedConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218881CDB5F6100ADCF21 /* FeedConverterTests.m */; };
 		96E2188E1CDB73B400ADCF21 /* FeedDataConverterStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2188D1CDB73B400ADCF21 /* FeedDataConverterStore.m */; };
 		96E218911CDB791500ADCF21 /* FeedDataConverterStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */; };
+		96E218961CDB8A1B00ADCF21 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218951CDB8A1B00ADCF21 /* FeedCell.m */; };
+		96E2189C1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2189B1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m */; };
+		96E2189F1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2189E1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m */; };
+		96E218A11CDB99ED00ADCF21 /* FeedCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218A01CDB99ED00ADCF21 /* FeedCellTests.m */; };
 		EAE8C057BDFF5992E0812838 /* Pods_RSSFeedParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +125,14 @@
 		96E2188C1CDB73AE00ADCF21 /* FeedDataConverterStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedDataConverterStore.h; sourceTree = "<group>"; };
 		96E2188D1CDB73B400ADCF21 /* FeedDataConverterStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDataConverterStore.m; sourceTree = "<group>"; };
 		96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDataConverterStoreTests.m; sourceTree = "<group>"; };
+		96E218921CDB897B00ADCF21 /* CellConfigurationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellConfigurationConstants.h; sourceTree = "<group>"; };
+		96E218941CDB8A1000ADCF21 /* FeedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		96E218951CDB8A1B00ADCF21 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		96E218991CDB8C4900ADCF21 /* DataDisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataDisplayManager.h; sourceTree = "<group>"; };
+		96E2189A1CDB8C5300ADCF21 /* MainFeedDataDisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFeedDataDisplayManager.h; sourceTree = "<group>"; };
+		96E2189B1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedDataDisplayManager.m; sourceTree = "<group>"; };
+		96E2189E1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedDataDisplayManagerTests.m; sourceTree = "<group>"; };
+		96E218A01CDB99ED00ADCF21 /* FeedCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCellTests.m; sourceTree = "<group>"; };
 		9D14689CC9787E0BD2B00FD8 /* Pods-RSSFeedParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeedParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeedParser/Pods-RSSFeedParser.release.xcconfig"; sourceTree = "<group>"; };
 		DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSFeedParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -292,6 +304,8 @@
 		96E2182F1CDA6D7900ADCF21 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96E218981CDB8C2600ADCF21 /* DataDisplayManager */,
+				96E218931CDB8A0400ADCF21 /* FeedCell */,
 				96E2188A1CDB738900ADCF21 /* FeedDataConverterStore */,
 				96E218821CDB5B8400ADCF21 /* FeedConverter */,
 				96E2187D1CDB5AE300ADCF21 /* FeedCellModel */,
@@ -523,6 +537,7 @@
 		96E2187D1CDB5AE300ADCF21 /* FeedCellModel */ = {
 			isa = PBXGroup;
 			children = (
+				96E218921CDB897B00ADCF21 /* CellConfigurationConstants.h */,
 				96E2187E1CDB5AF800ADCF21 /* CellConfiguration.h */,
 				96E2187F1CDB5B0100ADCF21 /* FeedCellModel.h */,
 				96E218801CDB5B0C00ADCF21 /* FeedCellModel.m */,
@@ -542,6 +557,11 @@
 		96E218861CDB5F3E00ADCF21 /* ViewTests */ = {
 			isa = PBXGroup;
 			children = (
+				96E218A01CDB99ED00ADCF21 /* FeedCellTests.m */,
+				96E2189E1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m */,
+				96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */,
+				96E218881CDB5F6100ADCF21 /* FeedConverterTests.m */,
+				96E2189D1CDB8F7700ADCF21 /* MainFeedDataDisplayManagerTests */,
 				96E2188F1CDB78F900ADCF21 /* FeedDataConverterStoreTests */,
 				96E218871CDB5F4A00ADCF21 /* FeedConverterTests */,
 			);
@@ -551,7 +571,6 @@
 		96E218871CDB5F4A00ADCF21 /* FeedConverterTests */ = {
 			isa = PBXGroup;
 			children = (
-				96E218881CDB5F6100ADCF21 /* FeedConverterTests.m */,
 			);
 			name = FeedConverterTests;
 			sourceTree = "<group>";
@@ -569,9 +588,34 @@
 		96E2188F1CDB78F900ADCF21 /* FeedDataConverterStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */,
 			);
 			name = FeedDataConverterStoreTests;
+			sourceTree = "<group>";
+		};
+		96E218931CDB8A0400ADCF21 /* FeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				96E218951CDB8A1B00ADCF21 /* FeedCell.m */,
+				96E218941CDB8A1000ADCF21 /* FeedCell.h */,
+			);
+			name = FeedCell;
+			sourceTree = "<group>";
+		};
+		96E218981CDB8C2600ADCF21 /* DataDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				96E218991CDB8C4900ADCF21 /* DataDisplayManager.h */,
+				96E2189B1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m */,
+				96E2189A1CDB8C5300ADCF21 /* MainFeedDataDisplayManager.h */,
+			);
+			name = DataDisplayManager;
+			sourceTree = "<group>";
+		};
+		96E2189D1CDB8F7700ADCF21 /* MainFeedDataDisplayManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MainFeedDataDisplayManagerTests;
 			sourceTree = "<group>";
 		};
 		F37650CC6D8BE5A042BCCF7C /* Frameworks */ = {
@@ -779,11 +823,13 @@
 				96E218601CDB436F00ADCF21 /* RSSFeedParserService.m in Sources */,
 				96E217FC1CDA69FA00ADCF21 /* ViewController.m in Sources */,
 				96E217F91CDA69FA00ADCF21 /* AppDelegate.m in Sources */,
+				96E2189C1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m in Sources */,
 				96E218391CDA757E00ADCF21 /* DataDownloaderImplementation.m in Sources */,
 				96E218491CDB372300ADCF21 /* ImageResize.m in Sources */,
 				96E218851CDB5BA000ADCF21 /* FeedConverter.m in Sources */,
 				96E2186B1CDB4A1E00ADCF21 /* MainFeedInteractor.m in Sources */,
 				96E217F61CDA69FA00ADCF21 /* main.m in Sources */,
+				96E218961CDB8A1B00ADCF21 /* FeedCell.m in Sources */,
 				96E218541CDB3DC900ADCF21 /* OutRussianDateFormatter.m in Sources */,
 				96E218341CDA6F0000ADCF21 /* FeedPlainObject.m in Sources */,
 				96E2188E1CDB73B400ADCF21 /* FeedDataConverterStore.m in Sources */,
@@ -803,9 +849,11 @@
 				96E218701CDB4A5800ADCF21 /* InteractorTests.m in Sources */,
 				96E218651CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m in Sources */,
 				96E2185B1CDB3F5200ADCF21 /* RussianDateFormatterTest.m in Sources */,
+				96E218A11CDB99ED00ADCF21 /* FeedCellTests.m in Sources */,
 				96E218911CDB791500ADCF21 /* FeedDataConverterStoreTests.m in Sources */,
 				96E2187C1CDB552800ADCF21 /* MainFeedPresenterTests.m in Sources */,
 				96E2184C1CDB3B9E00ADCF21 /* ImageResizeTests.m in Sources */,
+				96E2189F1CDB8F9C00ADCF21 /* MainFeedDataDisplayManagerTests.m in Sources */,
 				96E2180F1CDA69FA00ADCF21 /* RSSFeedParserTests.m in Sources */,
 				96E218451CDA7F4600ADCF21 /* RSSFeedParserImplementationTests.m in Sources */,
 			);
