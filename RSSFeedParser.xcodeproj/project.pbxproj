@@ -28,6 +28,8 @@
 		96E2185B1CDB3F5200ADCF21 /* RussianDateFormatterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2185A1CDB3F5200ADCF21 /* RussianDateFormatterTest.m */; };
 		96E218601CDB436F00ADCF21 /* RSSFeedParserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2185F1CDB436F00ADCF21 /* RSSFeedParserService.m */; };
 		96E218651CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E218641CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m */; };
+		96E2186B1CDB4A1E00ADCF21 /* MainFeedInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2186A1CDB4A1E00ADCF21 /* MainFeedInteractor.m */; };
+		96E218701CDB4A5800ADCF21 /* InteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2186F1CDB4A5800ADCF21 /* InteractorTests.m */; };
 		EAE8C057BDFF5992E0812838 /* Pods_RSSFeedParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,11 @@
 		96E2185F1CDB436F00ADCF21 /* RSSFeedParserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedParserService.m; sourceTree = "<group>"; };
 		96E218611CDB437500ADCF21 /* RSSFeedParserServiceOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSFeedParserServiceOutput.h; sourceTree = "<group>"; };
 		96E218641CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedParserServiceTests.m; sourceTree = "<group>"; };
+		96E218671CDB49EB00ADCF21 /* MainFeedInteractorInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFeedInteractorInput.h; sourceTree = "<group>"; };
+		96E218681CDB4A1100ADCF21 /* MainFeedInteractorOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFeedInteractorOutput.h; sourceTree = "<group>"; };
+		96E218691CDB4A1600ADCF21 /* MainFeedInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFeedInteractor.h; sourceTree = "<group>"; };
+		96E2186A1CDB4A1E00ADCF21 /* MainFeedInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedInteractor.m; sourceTree = "<group>"; };
+		96E2186F1CDB4A5800ADCF21 /* InteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractorTests.m; sourceTree = "<group>"; };
 		9D14689CC9787E0BD2B00FD8 /* Pods-RSSFeedParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeedParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeedParser/Pods-RSSFeedParser.release.xcconfig"; sourceTree = "<group>"; };
 		DA4F069DA13F5D7A5F6BE5C7 /* Pods_RSSFeedParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSFeedParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +174,7 @@
 		96E2180D1CDA69FA00ADCF21 /* RSSFeedParserTests */ = {
 			isa = PBXGroup;
 			children = (
+				96E2186C1CDB4A2900ADCF21 /* UserStoriesTests */,
 				96E218621CDB43AF00ADCF21 /* ServicesTests */,
 				96E2183A1CDA75D100ADCF21 /* ModelsTests */,
 				96E2180E1CDA69FA00ADCF21 /* RSSFeedParserTests.m */,
@@ -188,8 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				96E218291CDA6D2B00ADCF21 /* ApplicationLayer */,
-				96E2185C1CDB424E00ADCF21 /* Services */,
 				96E2182C1CDA6D5400ADCF21 /* UserStories */,
+				96E2185C1CDB424E00ADCF21 /* Services */,
 				96E218281CDA6D2000ADCF21 /* Models */,
 			);
 			name = Classes;
@@ -253,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				96E2182F1CDA6D7900ADCF21 /* View */,
+				96E218661CDB49D800ADCF21 /* Interactor */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -403,6 +412,41 @@
 				96E218641CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m */,
 			);
 			name = RSSFeedParserServiceTests;
+			sourceTree = "<group>";
+		};
+		96E218661CDB49D800ADCF21 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				96E218671CDB49EB00ADCF21 /* MainFeedInteractorInput.h */,
+				96E218681CDB4A1100ADCF21 /* MainFeedInteractorOutput.h */,
+				96E218691CDB4A1600ADCF21 /* MainFeedInteractor.h */,
+				96E2186A1CDB4A1E00ADCF21 /* MainFeedInteractor.m */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		96E2186C1CDB4A2900ADCF21 /* UserStoriesTests */ = {
+			isa = PBXGroup;
+			children = (
+				96E2186D1CDB4A3500ADCF21 /* MainFeedUserStoryTests */,
+			);
+			name = UserStoriesTests;
+			sourceTree = "<group>";
+		};
+		96E2186D1CDB4A3500ADCF21 /* MainFeedUserStoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				96E2186E1CDB4A4400ADCF21 /* InteractorTests */,
+			);
+			name = MainFeedUserStoryTests;
+			sourceTree = "<group>";
+		};
+		96E2186E1CDB4A4400ADCF21 /* InteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+				96E2186F1CDB4A5800ADCF21 /* InteractorTests.m */,
+			);
+			name = InteractorTests;
 			sourceTree = "<group>";
 		};
 		F37650CC6D8BE5A042BCCF7C /* Frameworks */ = {
@@ -612,6 +656,7 @@
 				96E217F91CDA69FA00ADCF21 /* AppDelegate.m in Sources */,
 				96E218391CDA757E00ADCF21 /* DataDownloaderImplementation.m in Sources */,
 				96E218491CDB372300ADCF21 /* ImageResize.m in Sources */,
+				96E2186B1CDB4A1E00ADCF21 /* MainFeedInteractor.m in Sources */,
 				96E217F61CDA69FA00ADCF21 /* main.m in Sources */,
 				96E218541CDB3DC900ADCF21 /* OutRussianDateFormatter.m in Sources */,
 				96E218341CDA6F0000ADCF21 /* FeedPlainObject.m in Sources */,
@@ -625,6 +670,7 @@
 			files = (
 				96E2183D1CDA760B00ADCF21 /* DataDownloaderImplementationTest.m in Sources */,
 				96E218591CDB3F4A00ADCF21 /* InRSSDateFormatterTest.m in Sources */,
+				96E218701CDB4A5800ADCF21 /* InteractorTests.m in Sources */,
 				96E218651CDB43FD00ADCF21 /* RSSFeedParserServiceTests.m in Sources */,
 				96E2185B1CDB3F5200ADCF21 /* RussianDateFormatterTest.m in Sources */,
 				96E2184C1CDB3B9E00ADCF21 /* ImageResizeTests.m in Sources */,
