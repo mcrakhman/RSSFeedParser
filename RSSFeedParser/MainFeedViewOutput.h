@@ -4,7 +4,7 @@
 
 @protocol MainFeedViewOutput <NSObject>
 
-- (void) getFeeds;
+- (void) didTriggerViewReadyEvent;
 
 @end
 

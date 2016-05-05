@@ -35,18 +35,18 @@
 	[super tearDown];
 }
 
-- (void) testWhenGetFeedsIsCalledInteractorStartsSearching {
+- (void) testThatDidTriggerViewReadyEventMakesInteractorStartSearching {
 	
 	// when
 	
-	[self.presenter getFeeds];
+	[self.presenter didTriggerViewReadyEvent];
 	
 	// then
 	
 	OCMVerify([self.mockInteractor startSearchingForRSSFeeds]);
 }
 
-- (void) testWhenShowFeedsIsCalledInterfaceShowMethodCalled {
+- (void) testThatShowFeedsMakesInterfaceCallShowMethod {
 	
 	// given
 	
@@ -61,7 +61,7 @@
 	OCMVerify([self.mockUserInterface updateDataForDisplayManager:testFeed]);
 }
 
-- (void) testWhenShowErrorIsCalledInterfaceShowAlertMethodCalled {
+- (void) testThatShowErrorMakesInterfaceShowAlert {
 	
 	// given
 	

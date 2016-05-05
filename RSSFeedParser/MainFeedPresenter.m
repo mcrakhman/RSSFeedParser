@@ -7,7 +7,8 @@
 
 #pragma mark - MainFeedViewOutput methods
 
-- (void) getFeeds {
+- (void)didTriggerViewReadyEvent {
+	[self.userInterface setupInitialState];
 	[self.interactor startSearchingForRSSFeeds];
 }
 

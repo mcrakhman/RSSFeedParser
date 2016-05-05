@@ -9,8 +9,11 @@
 @interface DataDisplayManagerTests : XCTestCase
 
 @property (nonatomic, strong, readwrite) MainFeedDataDisplayManager *manager;
-@property (nonatomic, strong, readwrite) ViewController *viewController;
+@property (nonatomic, strong, readwrite) id mockTableView;
 
+@end
+
+@protocol DelegateDatasource <UITableViewDelegate, UITableViewDataSource>
 @end
 
 @implementation DataDisplayManagerTests
@@ -26,23 +29,19 @@
 	
 	self.manager = [MainFeedDataDisplayManager new];
 	self.manager.store = OCMProtocolMock(@protocol(DataConverterStore));
-	
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-	
-	self.viewController = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-	[self.viewController view];
-	[self.manager setTableView:self.viewController.tableView andCellConfiguration:configuration];
+	self.mockTableView = OCMClassMock([UITableView class]);
+	self.manager.tableView = self.mockTableView;
+	self.manager.cellConfiguration = configuration;
 }
 
 - (void) tearDown {
 	
 	self.manager = nil;
-	self.viewController = nil;
-	
+
 	[super tearDown];
 }
 
-- (void) testHeightForRow {
+- (void) testHeightForRowReturnsCorrectHeight {
 	
 	// given
 	
@@ -58,11 +57,11 @@
 	XCTAssert(height == kExtendedFeedHeight);
 }
 
-- (void) testNumberOfRowsInSection {
+- (void) testNumberOfRowsInSectionReturnCorrectNumberOfRows {
 	
 	// given
 	
-	OCMStub ([self.manager.store totalFeeds]).andReturn (1);
+	OCMStub ([self.manager.store totalFeeds]).andReturn (5);
 	
 	// when
 	
@@ -70,7 +69,7 @@
 	
 	// then
 	
-	XCTAssert (count == 1);
+	XCTAssert (count == 5);
 	
 }
 
@@ -79,18 +78,16 @@
 	// given
 	
 	FeedCellModel *model = [FeedCellModel new];
-	model.dateString = @"2 мая 2015 года 10:00";
-	model.feedOrigin = @"Gazeta";
-	model.title = @"Title";
-	model.feedDescription = @"Description";
+	FeedCell* cell = OCMClassMock([FeedCell class)];
 	
 	NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
 	
 	OCMStub ([self.manager.store feedAtIndex:0]).andReturn (model);
-	
+	OCMStub ([self.manager.tableView dequeueReusableCellWithIdentifier:kFeedCellIdentifier forIndexPath:path]).andReturn (cell);
+	OCMStub ([cell configureWithFeed:OCMOCK_ANY]);
 	// when
 	
-	FeedCell* cell = (FeedCell *)[self.manager tableView:self.manager.tableView cellForRowAtIndexPath:path];
+	cell = (FeedCell *)[self.manager tableView:self.manager.tableView cellForRowAtIndexPath:path];
 	
 	// then
 	

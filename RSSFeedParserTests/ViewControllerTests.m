@@ -1,10 +1,3 @@
-//
-//  ViewControllerTests.m
-//  RSSFeedParser
-//
-//  Created by MIKHAIL RAKHMANOV on 05.05.16.
-//  Copyright © 2016 No Logo. All rights reserved.
-//
 
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
@@ -43,7 +36,7 @@
     [super tearDown];
 }
 
-- (void) testThatOutputGetFeedsIsCalledAfterViewDidLoad {
+- (void) testThatOutputDidTriggerViewReadyEventIsCalledAfterViewDidLoad {
 	
 	// given
 	
@@ -53,7 +46,7 @@
 	
 	// then
 	
-	OCMVerify([self.mockOutput getFeeds]);
+	OCMVerify([self.mockOutput didTriggerViewReadyEvent]);
 	
 }
 

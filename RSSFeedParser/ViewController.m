@@ -16,13 +16,7 @@
 	
 	self.isErrorShowing = false;
 	
-	[self configureTableView];
-	[self.output getFeeds];
-}
-
-- (void)viewDidAppear: (BOOL) animated {
-	[super viewDidAppear:animated];
-	
+	[self.output didTriggerViewReadyEvent];
 }
 
 #pragma mark - private methods
@@ -37,7 +31,7 @@
 	[self.manager setTableView:self.tableView andCellConfiguration:configuration];
 }
 
-#pragma mark - MainViewOutput methods
+#pragma mark - MainViewInput methods
 
 - (void) updateDataForDisplayManager:(FeedPlainObject *)feed {
 	[self.manager addFeed:feed];
@@ -74,5 +68,8 @@
 	});
 }
 
+- (void) setupInitialState {
+	[self configureTableView];
+}
 
 @end

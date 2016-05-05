@@ -1,10 +1,3 @@
-//
-//  RSSFeedParserService.m
-//  ObjCTest
-//
-//  Created by MIKHAIL RAKHMANOV on 03.05.16.
-//  Copyright © 2016 No Logo. All rights reserved.
-//
 
 #import "RSSFeedParserService.h"
 

@@ -70,8 +70,4 @@
 	XCTAssert(cell.imageHeightConstraint.constant == self.cellConfiguration.imageSize.height);
 }
 
-- (void) newTest {
-	XCTAssert(1 == 1);
-}
-
 @end
