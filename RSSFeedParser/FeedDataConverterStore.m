@@ -18,6 +18,8 @@
 	return self;
 }
 
+#pragma mark - Private methods
+
 - (void) sortFeeds {
 	
 	NSComparisonResult (^comparisonBlock) (FeedCellModel *obj1, FeedCellModel *obj2) = ^(FeedCellModel *obj1, FeedCellModel *obj2) {
@@ -28,6 +30,14 @@
 	[self.feeds sortUsingComparator:comparisonBlock];
 }
 
+- (void) sortUpdateArrayWithNewFeed: (FeedPlainObject *) feed {
+	
+	FeedCellModel* newFeed = [self.converter convertFeed:feed];
+	
+	[self.feeds addObject:newFeed];
+	[self sortFeeds];
+}
+
 #pragma mark - DataConverterStore methods
 
 - (void) addFeed:(FeedPlainObject *)feed {
@@ -35,10 +45,7 @@
 	__weak typeof(self) welf = self;
 	
 	dispatch_async(self.queue, ^{
-		FeedCellModel* newFeed = [welf.converter convertFeed:feed];
-		
-		[welf.feeds addObject:newFeed];
-		[welf sortFeeds];
+		[welf sortUpdateArrayWithNewFeed:feed];
 	});
 	
 }

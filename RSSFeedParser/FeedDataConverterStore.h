@@ -14,7 +14,6 @@
 @property (nonatomic, strong, readwrite) NSMutableArray *feeds;
 
 - (id) init;
-- (void) sortFeeds;
 
 @end
 

@@ -587,18 +587,8 @@
 				96E218A01CDB99ED00ADCF21 /* FeedCellTests.m */,
 				96E218901CDB791500ADCF21 /* FeedDataConverterStoreTests.m */,
 				96E218881CDB5F6100ADCF21 /* FeedConverterTests.m */,
-				96E2189D1CDB8F7700ADCF21 /* MainFeedDataDisplayManagerTests */,
-				96E2188F1CDB78F900ADCF21 /* FeedDataConverterStoreTests */,
-				96E218871CDB5F4A00ADCF21 /* FeedConverterTests */,
 			);
 			name = ViewTests;
-			sourceTree = "<group>";
-		};
-		96E218871CDB5F4A00ADCF21 /* FeedConverterTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FeedConverterTests;
 			sourceTree = "<group>";
 		};
 		96E2188A1CDB738900ADCF21 /* FeedDataConverterStore */ = {
@@ -609,13 +599,6 @@
 				96E2188D1CDB73B400ADCF21 /* FeedDataConverterStore.m */,
 			);
 			name = FeedDataConverterStore;
-			sourceTree = "<group>";
-		};
-		96E2188F1CDB78F900ADCF21 /* FeedDataConverterStoreTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FeedDataConverterStoreTests;
 			sourceTree = "<group>";
 		};
 		96E218931CDB8A0400ADCF21 /* FeedCell */ = {
@@ -635,13 +618,6 @@
 				96E2189B1CDB8C5800ADCF21 /* MainFeedDataDisplayManager.m */,
 			);
 			name = DataDisplayManager;
-			sourceTree = "<group>";
-		};
-		96E2189D1CDB8F7700ADCF21 /* MainFeedDataDisplayManagerTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MainFeedDataDisplayManagerTests;
 			sourceTree = "<group>";
 		};
 		F37650CC6D8BE5A042BCCF7C /* Frameworks */ = {
