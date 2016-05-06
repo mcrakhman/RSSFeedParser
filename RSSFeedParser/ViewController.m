@@ -19,18 +19,6 @@
 	[self.output didTriggerViewReadyEvent];
 }
 
-#pragma mark - private methods
-
-- (void) configureTableView {
-	CellConfiguration configuration;
-	
-	configuration.imageSize = CGSizeMake (kFeedImageSizeWidth, kFeedImageSizeHeight);
-	configuration.basicHeight = kBasicFeedHeight;
-	configuration.extendedHeight = kExtendedFeedHeight;
-	
-	[self.manager setTableView:self.tableView andCellConfiguration:configuration];
-}
-
 #pragma mark - MainViewInput methods
 
 - (void) updateDataForDisplayManager:(FeedPlainObject *)feed {
@@ -68,8 +56,8 @@
 	});
 }
 
-- (void) setupInitialState {
-	[self configureTableView];
+- (void) setupInitialStateWithCellConfiguration: (CellConfiguration) cellConfiguration {
+	[self.manager setTableView:self.tableView andCellConfiguration:cellConfiguration];
 }
 
 @end

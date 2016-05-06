@@ -2,6 +2,8 @@
 #ifndef CellConfiguration_h
 #define CellConfiguration_h
 
+#import <UIKit/UIKit.h>
+
 /**
  Defines cell state (i.e. whether the cell was selected)
  */

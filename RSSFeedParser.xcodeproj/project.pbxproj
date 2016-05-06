@@ -10,6 +10,7 @@
 		965BE36D1CDBBA100025DACB /* DataDisplayManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BE36C1CDBBA100025DACB /* DataDisplayManagerTests.m */; };
 		965BE36F1CDBCF050025DACB /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BE36E1CDBCF050025DACB /* ViewControllerTests.m */; };
 		965BE3751CDBD4260025DACB /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BE3741CDBD4260025DACB /* ApplicationAssembly.m */; };
+		965BE3771CDC2B490025DACB /* CellConfigurationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BE3761CDC2B490025DACB /* CellConfigurationConstants.m */; };
 		96E217F61CDA69FA00ADCF21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E217F51CDA69FA00ADCF21 /* main.m */; };
 		96E217F91CDA69FA00ADCF21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E217F81CDA69FA00ADCF21 /* AppDelegate.m */; };
 		96E217FC1CDA69FA00ADCF21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E217FB1CDA69FA00ADCF21 /* ViewController.m */; };
@@ -70,6 +71,7 @@
 		965BE3721CDBD4050025DACB /* ApplicationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationConstants.h; sourceTree = "<group>"; };
 		965BE3731CDBD41C0025DACB /* ApplicationAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationAssembly.h; sourceTree = "<group>"; };
 		965BE3741CDBD4260025DACB /* ApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationAssembly.m; sourceTree = "<group>"; };
+		965BE3761CDC2B490025DACB /* CellConfigurationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellConfigurationConstants.m; sourceTree = "<group>"; };
 		96E217F11CDA69FA00ADCF21 /* RSSFeedParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeedParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E217F51CDA69FA00ADCF21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96E217F71CDA69FA00ADCF21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -563,6 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				96E218921CDB897B00ADCF21 /* CellConfigurationConstants.h */,
+				965BE3761CDC2B490025DACB /* CellConfigurationConstants.m */,
 				96E2187E1CDB5AF800ADCF21 /* CellConfiguration.h */,
 				96E2187F1CDB5B0100ADCF21 /* FeedCellModel.h */,
 				96E218801CDB5B0C00ADCF21 /* FeedCellModel.m */,
@@ -833,6 +836,7 @@
 				96E2186B1CDB4A1E00ADCF21 /* MainFeedInteractor.m in Sources */,
 				96E217F61CDA69FA00ADCF21 /* main.m in Sources */,
 				96E218961CDB8A1B00ADCF21 /* FeedCell.m in Sources */,
+				965BE3771CDC2B490025DACB /* CellConfigurationConstants.m in Sources */,
 				96E218541CDB3DC900ADCF21 /* OutRussianDateFormatter.m in Sources */,
 				96E218341CDA6F0000ADCF21 /* FeedPlainObject.m in Sources */,
 				96E2188E1CDB73B400ADCF21 /* FeedDataConverterStore.m in Sources */,

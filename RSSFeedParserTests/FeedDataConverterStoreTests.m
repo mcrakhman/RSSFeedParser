@@ -1,10 +1,3 @@
-//
-//  FeedDataConverterStoreTests.m
-//  RSSFeedParser
-//
-//  Created by MIKHAIL RAKHMANOV on 05.05.16.
-//  Copyright © 2016 No Logo. All rights reserved.
-//
 
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>

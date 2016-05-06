@@ -2,13 +2,15 @@
 #import <Foundation/Foundation.h>
 #import "MainFeedPresenter.h"
 #import "MainFeedInteractor.h"
+#import "CellConfigurationConstants.h"
 
 @implementation MainFeedPresenter: NSObject
 
 #pragma mark - MainFeedViewOutput methods
 
 - (void)didTriggerViewReadyEvent {
-	[self.userInterface setupInitialState];
+	
+	[self.userInterface setupInitialStateWithCellConfiguration: basicCellConfiguration];
 	[self.interactor startSearchingForRSSFeeds];
 }
 

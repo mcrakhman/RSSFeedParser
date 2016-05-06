@@ -35,7 +35,7 @@
 	[super tearDown];
 }
 
-- (void) testThatDidTriggerViewReadyEventMakesInteractorStartSearching {
+- (void) testThatDidTriggerViewReadyEventMakesInteractorStartSearchingAndSetsUIInitialState {
 	
 	// when
 	
@@ -44,6 +44,7 @@
 	// then
 	
 	OCMVerify([self.mockInteractor startSearchingForRSSFeeds]);
+	OCMVerify([self.mockUserInterface setupInitialStateWithCellConfiguration]);
 }
 
 - (void) testThatShowFeedsMakesInterfaceCallShowMethod {

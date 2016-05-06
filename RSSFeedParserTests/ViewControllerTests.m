@@ -16,15 +16,13 @@
 - (void)setUp {
     [super setUp];
 
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-	
-	self.viewController = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-	[self.viewController view];
+	self.viewController = [ViewController new];
 
 	self.mockOutput = OCMProtocolMock(@protocol(MainFeedViewOutput));
 	self.mockManager = OCMProtocolMock(@protocol(DataDisplayManager));
 	self.viewController.output = self.mockOutput;
 	self.viewController.manager = self.mockManager;
+	self.viewController.tableView = OCMClassMock([UITableView class]);
 }
 
 - (void)tearDown {
@@ -35,6 +33,8 @@
 	
     [super tearDown];
 }
+
+//- (void) testThatConfiguringTableViewCallsDisplay
 
 - (void) testThatOutputDidTriggerViewReadyEventIsCalledAfterViewDidLoad {
 	
@@ -61,6 +61,13 @@
 	// then
 	
 	OCMVerify([self.mockManager addFeed:OCMOCK_ANY]);
+	
+}
+
+- (void) testThatAlertViewMayNotBeShownMoreThanOnce {
+	
+	// when
+	
 	
 }
 
