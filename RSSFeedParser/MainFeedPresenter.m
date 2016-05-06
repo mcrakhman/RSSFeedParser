@@ -6,11 +6,19 @@
 
 @implementation MainFeedPresenter: NSObject
 
+- (id) init {
+	if (self = [super init]) {
+		self.cellConfiguration = kBasicCellConfiguration;
+	}
+	
+	return self;
+}
+
 #pragma mark - MainFeedViewOutput methods
 
 - (void)didTriggerViewReadyEvent {
 	
-	[self.userInterface setupInitialStateWithCellConfiguration: basicCellConfiguration];
+	[self.userInterface setupInitialStateWithCellConfiguration: self.cellConfiguration];
 	[self.interactor startSearchingForRSSFeeds];
 }
 

@@ -11,6 +11,7 @@
 
 @property (nonatomic, strong, readwrite) id <MainFeedInteractorInput> interactor;
 @property (nonatomic, weak, readwrite) id <MainFeedViewInput> userInterface;
+@property (nonatomic, readwrite) CellConfiguration cellConfiguration;
 
 @end
 

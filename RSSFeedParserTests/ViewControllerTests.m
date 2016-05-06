@@ -2,6 +2,7 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "ViewController.h"
+#import "CellConfigurationConstants.h"
 
 @interface ViewControllerTests : XCTestCase
 
@@ -34,7 +35,17 @@
     [super tearDown];
 }
 
-//- (void) testThatConfiguringTableViewCallsDisplay
+- (void) testThatSetupInitialStateSetsTableViewAndCellConfiguration {
+	
+	// given
+	
+	// when
+	[self.viewController setupInitialStateWithCellConfiguration:kBasicCellConfiguration];
+	
+	// then
+	
+	OCMVerify([self.mockManager setTableView:OCMOCK_ANY andCellConfiguration: kBasicCellConfiguration]);
+}
 
 - (void) testThatOutputDidTriggerViewReadyEventIsCalledAfterViewDidLoad {
 	
@@ -64,11 +75,5 @@
 	
 }
 
-- (void) testThatAlertViewMayNotBeShownMoreThanOnce {
-	
-	// when
-	
-	
-}
 
 @end

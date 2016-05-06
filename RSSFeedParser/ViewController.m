@@ -37,7 +37,7 @@
 	
 	UIAlertController * alert = [UIAlertController
 								 alertControllerWithTitle:@"Ошибочка"
-								 message:@"Какая-то ошибка а работе, даже и не знаю, что сказать..."
+								 message:@"Какая-то ошибка а работе приложения, даже и не знаю, что еще сказать..."
 								 preferredStyle:UIAlertControllerStyleAlert];
 	
 	UIAlertAction* action = [UIAlertAction

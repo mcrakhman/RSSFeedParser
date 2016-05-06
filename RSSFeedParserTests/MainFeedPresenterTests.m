@@ -4,6 +4,9 @@
 #import "MainFeedPresenter.h"
 #import "MainFeedInteractorInput.h"
 #import "MainFeedViewInput.h"
+#import "CellConfigurationConstants.h"
+
+#define OCMOCK_STRUCT(atype, variable) [NSValue valueWithBytes:&variable withObjCType:@encode(atype)]
 
 @interface MainFeedPresenterTests : XCTestCase
 
@@ -37,6 +40,10 @@
 
 - (void) testThatDidTriggerViewReadyEventMakesInteractorStartSearchingAndSetsUIInitialState {
 	
+	// given
+	
+	self.presenter.cellConfiguration = kBasicCellConfiguration;
+	
 	// when
 	
 	[self.presenter didTriggerViewReadyEvent];
@@ -44,7 +51,7 @@
 	// then
 	
 	OCMVerify([self.mockInteractor startSearchingForRSSFeeds]);
-	OCMVerify([self.mockUserInterface setupInitialStateWithCellConfiguration]);
+	OCMVerify([self.mockUserInterface setupInitialStateWithCellConfiguration:kBasicCellConfiguration]);
 }
 
 - (void) testThatShowFeedsMakesInterfaceCallShowMethod {

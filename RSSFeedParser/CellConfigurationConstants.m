@@ -4,7 +4,7 @@
 #import "CellConfiguration.h"
 #import "CellConfigurationConstants.h"
 
-const CellConfiguration basicCellConfiguration = {
+const CellConfiguration kBasicCellConfiguration = {
 		{kFeedImageSizeWidth, kFeedImageSizeHeight},
 		kBasicFeedHeight,
 		kExtendedFeedHeight,
