@@ -17,6 +17,8 @@ static NSString* const testXMLString = @"<item>\n<guid>Guid</guid>\n<title>Title
 @interface RSSFeedParserImplementation (PrivateMethods)
 
 - (void) beginParsing;
+- (BOOL) checkFeedUrlAndReportErrorIfNeeded: (NSURL *)feedUrl;
+- (void) configureFeedParser;
 
 @end
 
@@ -48,6 +50,75 @@ static NSString* const testXMLString = @"<item>\n<guid>Guid</guid>\n<title>Title
 	self.parser = nil;
 	
     [super tearDown];
+}
+
+- (void) testThatAfterConfigurationNSXMLParserWillNotBeNil {
+	
+	// given
+	
+	self.parser.xmlParser = nil;
+	self.parser.feedUrlString = @"http://www.lenta.ru/rss";
+	self.parser.elementOrigin = @"Lenta";
+	// when
+	
+	[self.parser configureFeedParser];
+	
+	// then
+	
+	XCTAssert(self.parser.xmlParser != nil);
+	
+}
+
+- (void) testWheterNilFeedProviderURLWillCauseError {
+	
+	// given
+	
+	// when
+	[[self. mockDelegate expect] errorDidOccur:OCMOCK_ANY];
+	
+	[self.parser checkFeedUrlAndReportErrorIfNeeded:nil];
+	
+	// then
+	
+	[self.mockDelegate verify];
+	
+}
+
+- (void) testThatParserErrorMakesDelegateCallErrorDunction {
+	
+	// given
+	
+	// when
+	
+	[[self.mockDelegate expect] errorDidOccur:OCMOCK_ANY];
+	[self.parser parser:self.parser.xmlParser parseErrorOccurred:OCMOCK_ANY];
+	
+	// then
+	
+	[self.mockDelegate verify];
+	
+}
+
+- (void) testThatBadXMLFormattingWillCauseError {
+	
+	// given
+	
+	NSString* badXMLString = @"<item> wadjaoijdwo<dawd>WDOadajD<guid>dwad";
+	NSData* data = [badXMLString dataUsingEncoding:NSUTF8StringEncoding];
+	
+	self.parser.xmlParser = [[NSXMLParser alloc] initWithData:data];
+	[self.parser.xmlParser setDelegate: self.parser];
+	[self.parser.xmlParser setShouldResolveExternalEntities: NO];
+	
+	// when
+	
+	[[self.mockDelegate expect] errorDidOccur:OCMOCK_ANY];
+	[self.parser beginParsing];
+	
+	// then
+	
+	[self.mockDelegate verify];
+	
 }
 
 - (void) testWhetherParserReadsXMLAsExpected {
