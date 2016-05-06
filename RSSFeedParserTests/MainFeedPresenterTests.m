@@ -6,8 +6,6 @@
 #import "MainFeedViewInput.h"
 #import "CellConfigurationConstants.h"
 
-#define OCMOCK_STRUCT(atype, variable) [NSValue valueWithBytes:&variable withObjCType:@encode(atype)]
-
 @interface MainFeedPresenterTests : XCTestCase
 
 @property (nonatomic, strong, readwrite) MainFeedPresenter* presenter;

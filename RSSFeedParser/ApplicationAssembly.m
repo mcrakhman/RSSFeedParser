@@ -39,22 +39,6 @@
 	}];
 }
 
-- (id) lentaRSSParser {
-	return [TyphoonDefinition withClass:[RSSFeedParserImplementation class] configuration:^(TyphoonDefinition *definition) {
-		[definition injectProperty:@selector(delegate) with:[self rssFeedParserService]];
-		[definition injectProperty:@selector(elementOrigin) with:kLentaRSSFeedOrigin];
-		[definition injectProperty:@selector(feedUrlString) with:kLentaUrl];
-	}];
-}
-
-- (id) gazetaRSSParser {
-	return [TyphoonDefinition withClass:[RSSFeedParserImplementation class] configuration:^(TyphoonDefinition *definition) {
-		[definition injectProperty:@selector(delegate) with:[self rssFeedParserService]];
-		[definition injectProperty:@selector(elementOrigin) with:kGazetaRSSFeedOrigin];
-		[definition injectProperty:@selector(feedUrlString) with:kGazetaUrl];
-	}];
-}
-
 - (id) dataManager {
 	return [TyphoonDefinition withClass:[MainFeedDataDisplayManager class] configuration:^(TyphoonDefinition *definition) {
 		[definition injectProperty:@selector(store) with:[self dataStore]];
@@ -84,5 +68,21 @@
 	}];
 }
 
+
+- (id) lentaRSSParser {
+	return [TyphoonDefinition withClass:[RSSFeedParserImplementation class] configuration:^(TyphoonDefinition *definition) {
+		[definition injectProperty:@selector(delegate) with:[self rssFeedParserService]];
+		[definition injectProperty:@selector(elementOrigin) with:kLentaRSSFeedOrigin];
+		[definition injectProperty:@selector(feedUrlString) with:kLentaUrl];
+	}];
+}
+
+- (id) gazetaRSSParser {
+	return [TyphoonDefinition withClass:[RSSFeedParserImplementation class] configuration:^(TyphoonDefinition *definition) {
+		[definition injectProperty:@selector(delegate) with:[self rssFeedParserService]];
+		[definition injectProperty:@selector(elementOrigin) with:kGazetaRSSFeedOrigin];
+		[definition injectProperty:@selector(feedUrlString) with:kGazetaUrl];
+	}];
+}
 
 @end
