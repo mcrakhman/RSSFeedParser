@@ -10,6 +10,14 @@
 #import <OCMock/OCMock.h>
 #import "FeedDataConverterStore.h"
 
+@interface FeedDataConverterStore (PrivateMethods)
+
+- (void) sortCellModels;
+- (void) sortUpdateArrayWithNewFeed: (FeedPlainObject *) feed;
+- (void) convertFeedAndAddAsACellModel: (FeedPlainObject *) feed;
+
+@end
+
 @interface FeedDataConverterStoreTests : XCTestCase
 
 @property (strong, nonatomic, readwrite) FeedDataConverterStore *store;
@@ -35,10 +43,38 @@
     [super tearDown];
 }
 
-- (void) testThatFeedsAreAddedAndSortedAndTheRightAmountOfThemProvidedToTheCaller {
+- (void) testThatFeedsAreAddedToTheArrayAndCorrectElementsReturned {
 	
 	// given
-	dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+	
+	FeedPlainObject *firstObject = [FeedPlainObject new];
+	FeedPlainObject *secondObject = [FeedPlainObject new];
+	FeedCellModel *firstModel = [FeedCellModel new];
+	FeedCellModel *secondModel = [FeedCellModel new];
+	
+	OCMStub ([self.mockConverter convertFeed:firstObject]).andReturn (firstModel);
+	OCMStub ([self.mockConverter convertFeed:secondObject]).andReturn (secondModel);
+	
+	// when
+	
+	[self.store convertFeedAndAddAsACellModel:firstObject];
+	[self.store convertFeedAndAddAsACellModel:secondObject];
+	
+	// then
+	
+	XCTAssert(self.store.feeds.count == 2);
+	XCTAssert(self.store.feeds [0] == firstModel);
+	XCTAssert(self.store.feeds [1] == secondModel);
+	
+	XCTAssert([self.store totalFeeds] == 2);
+	XCTAssert([self.store feedAtIndex:0] == firstModel);
+	XCTAssert([self.store feedAtIndex:1] == secondModel);
+	
+}
+
+- (void) testThatTheFeedsAreProperlySorted {
+	
+	// given
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -48,39 +84,23 @@
 	NSString *stringSecondDate = @"2016-05-02 11:00:00";
 	NSDate *secondDate = [dateFormatter dateFromString:stringSecondDate];
 	
-	FeedPlainObject *firstObject = [FeedPlainObject new];
-	FeedPlainObject *secondObject = [FeedPlainObject new];
-	
 	FeedCellModel *firstModel = [FeedCellModel new];
 	firstModel.date = firstDate;
 	
 	FeedCellModel *secondModel = [FeedCellModel new];
 	secondModel.date = secondDate;
 	
-	OCMStub ([self.mockConverter convertFeed:firstObject]).andReturn (firstModel);
-	OCMStub ([self.mockConverter convertFeed:secondObject]).andReturn (secondModel);
+	[self.store.feeds addObjectsFromArray:@[firstModel, secondModel]];
 	
 	// when
 	
-	// the sorting is made on the async background queue
-	[self.store addFeed:firstObject]; // with earlier date
-	[self.store addFeed:secondObject]; // with later date
+	[self.store sortCellModels];
 	
 	// then
 	
-	// we are sure that the array is sorted after the time is exceeded
-	dispatch_time_t timeoutTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
+	XCTAssert (self.store.feeds[0] == secondModel);
 	
-	if (dispatch_semaphore_wait(semaphore, timeoutTime)) {
-		
-		XCTAssert ([self.store totalFeeds] == 2);
-		
-		XCTAssert ([self.store feedAtIndex:0] == secondModel); // the latest date shall be at the beginning of the array
-	}
 }
 
-- (void) newTest {
-	
-}
 
 @end

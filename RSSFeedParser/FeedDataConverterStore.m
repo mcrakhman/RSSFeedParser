@@ -20,7 +20,7 @@
 
 #pragma mark - Private methods
 
-- (void) sortFeeds {
+- (void) sortCellModels {
 	
 	NSComparisonResult (^comparisonBlock) (FeedCellModel *obj1, FeedCellModel *obj2) = ^(FeedCellModel *obj1, FeedCellModel *obj2) {
 		
@@ -30,12 +30,16 @@
 	[self.feeds sortUsingComparator:comparisonBlock];
 }
 
-- (void) sortUpdateArrayWithNewFeed: (FeedPlainObject *) feed {
+- (void) convertFeedAndAddAsACellModel: (FeedPlainObject *) feed {
 	
 	FeedCellModel* newFeed = [self.converter convertFeed:feed];
-	
 	[self.feeds addObject:newFeed];
-	[self sortFeeds];
+}
+
+- (void) sortUpdateArrayWithNewFeed: (FeedPlainObject *) feed {
+	
+	[self convertFeedAndAddAsACellModel:feed];
+	[self sortCellModels];
 }
 
 #pragma mark - DataConverterStore methods
