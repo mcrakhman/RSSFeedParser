@@ -5,6 +5,9 @@
 
 @implementation RSSFeedParserImplementation : NSObject
 
+/**
+ Parses the feeds on the concurrent queue, because by defaul NSXMLParser won't do it async
+ */
 - (void) parse {
 	
 	[self configureFeedParser];

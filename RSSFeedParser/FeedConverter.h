@@ -32,6 +32,8 @@
  which the cell will display
  */
 @property (nonatomic, strong, readwrite) id <OutDateFormatter> stringReceiverFormatter;
+/** The delegate is the data display manager which knows the cell configuration
+ */
 @property (nonatomic, weak, readwrite) id <FeedConverterDelegate> delegate;
 
 @end

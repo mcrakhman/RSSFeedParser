@@ -13,6 +13,10 @@
 
 #pragma mark - RSSFeedParser methods
 
+/**
+ The method attaches image data to the XML file
+ */
+
 - (void) didDownloadRSSFeedXMLData: (FeedPlainObject *)feed {
 	NSString* url = feed.imageUrlString;
 	

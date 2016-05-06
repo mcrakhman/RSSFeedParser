@@ -16,6 +16,10 @@
 
 #pragma mark - MainFeedViewOutput methods
 
+/**
+ Starts the application
+ */
+
 - (void)didTriggerViewReadyEvent {
 	
 	[self.userInterface setupInitialStateWithCellConfiguration: self.cellConfiguration];

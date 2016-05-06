@@ -13,6 +13,10 @@
 
 #pragma mark - RSSFeedParserServiceOutput methods
 
+/**
+ This method is called by the service upon download
+ */
+
 - (void) didDownloadFeed:(FeedPlainObject *)feed {
 	
 	if (feed != nil) {

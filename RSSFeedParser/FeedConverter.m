@@ -7,6 +7,12 @@ static CGFloat const kSizeIncreaseMultiplier = 1.3;
 
 @implementation FeedConverter: NSObject
 
+#pragma mark - DataConverter methods
+
+/**
+ Filters data received from the service and transforms it to cell model
+ */
+
 - (FeedCellModel *) convertFeed:(FeedPlainObject *)feed {
 	
 	FeedCellModel* cellModel = [FeedCellModel new];
@@ -24,11 +30,15 @@ static CGFloat const kSizeIncreaseMultiplier = 1.3;
 	return cellModel;
 }
 
+/**
+ Transforms NSData to UIImage and resizes it, so it would fit into cells and won't take 
+ too much space in the memory
+ */
 - (UIImage *) convertNSDataToImageDependingOnCellConfiguration:(NSData *)data {
 	
 	CellConfiguration configuration = [self.delegate getCellConfiguration];
 	
-	// increasing size, so there would be no pixelation effects
+	// increasing size a little bit, so the image won't look blurry
 	CGSize imageSize = configuration.imageSize;
 	imageSize.height = imageSize.height * kSizeIncreaseMultiplier;
 	imageSize.width = imageSize.width * kSizeIncreaseMultiplier;

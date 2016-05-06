@@ -9,6 +9,10 @@ static NSInteger const kDefaultSelectedRowIndex = -1;
 
 #pragma mark - DataDisplayManager methods
 
+
+/**
+ Prepares the tableView for presentation
+ */
 - (void) setTableView: (UITableView *)tableView andCellConfiguration:(CellConfiguration)configuration {
 	
 	self.tableView = tableView;
@@ -21,6 +25,9 @@ static NSInteger const kDefaultSelectedRowIndex = -1;
 	self.cellConfiguration = configuration;
 }
 
+/**
+ Provides the feed object to the data store and reloads the data on the main queue
+ */
 - (void) addFeed: (FeedPlainObject *)feed {
 	
 	[self.store addFeed:feed];
@@ -35,6 +42,10 @@ static NSInteger const kDefaultSelectedRowIndex = -1;
 
 #pragma mark - UITableViewDelegate methods
 
+/**
+ Provides the height depending on the state of cell (i.e. whether it is tapped or not)
+ */
+
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	if (indexPath.row == self.selectedRowIndex) {
@@ -44,6 +55,9 @@ static NSInteger const kDefaultSelectedRowIndex = -1;
 	}
 }
 
+/**
+ Changes the state of the cell and reloads the data to trigger heightForRowAtIndexPath
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	self.selectedRowIndex = self.selectedRowIndex != indexPath.row ? indexPath.row : kDefaultSelectedRowIndex;
@@ -81,6 +95,9 @@ static NSInteger const kDefaultSelectedRowIndex = -1;
 
 #pragma mark - FeedConverterDelegate methods
 
+/**
+ provides cell configuration to the converter for it to properly resize the image
+ */
 - (CellConfiguration)getCellConfiguration {
 	return self.cellConfiguration;
 }

@@ -44,6 +44,10 @@
 
 #pragma mark - DataConverterStore methods
 
+
+/** 
+ Adding feeds so that any modifications to the array is made on the serial queue to avoid race conditions
+ */
 - (void) addFeed:(FeedPlainObject *)feed {
 
 	__weak typeof(self) welf = self;

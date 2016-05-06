@@ -6,6 +6,9 @@
 
 @implementation UIImage (Resize)
 
+/**
+ Resizes image so it will be of maximum size while fully fitting inside the "size" (parameter)
+ */
 - (UIImage *) resizeScaleAspectFit: (CGSize)size {
 	
 	CGFloat height = self.size.height;

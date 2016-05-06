@@ -21,12 +21,20 @@
 
 #pragma mark - MainViewInput methods
 
+/**
+ Provides the feed to the display manager 
+ */
 - (void) updateDataForDisplayManager:(FeedPlainObject *)feed {
 	[self.manager addFeed:feed];
 }
 
+/**
+ Shows alert on any error occured. As of this version, it does not analyze the errors based on the NSError object
+ */
+
 - (void) showAlertWithError:(NSError *)error {
 	
+	// prevent more than 1 error to show up
 	if (self.isErrorShowing) {
 		return;
 	}
@@ -55,6 +63,10 @@
 		[welf presentViewController:alert animated:NO completion:nil];
 	});
 }
+
+/**
+ Starts the data display manager
+ */
 
 - (void) setupInitialStateWithCellConfiguration: (CellConfiguration) cellConfiguration {
 	[self.manager setTableView:self.tableView andCellConfiguration:cellConfiguration];
